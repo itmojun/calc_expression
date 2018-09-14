@@ -198,7 +198,7 @@ int calc(std::string exp)
 					if(n1 == 0)
 					{
 						//std::cout << "除数不能为零！" << std::endl;
-						throw 1;
+						throw 0;
 					}
 
 					r = n2 / n1;
@@ -231,9 +231,13 @@ int main()
 		}
 		catch(int e)
 		{
-			if(e == 1)
+			if(e == 0)
 			{
 				std::cout << "除数不能为零！" << std::endl;
+			}
+			else
+			{
+				std::cout << "表达式格式错误，无法求值！" << std::endl;
 			}
 		}
 	}
